@@ -132,3 +132,10 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
+
+.pessoa-invalida {
+	background-color: #00ff00;
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+}
