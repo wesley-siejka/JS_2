@@ -1,22 +1,22 @@
-var titulo = document.querySelector(".titulo");
+let titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Nutricionista";
 
-var pacientes = document.querySelectorAll(".paciente");
+let pacientes = document.querySelectorAll(".paciente");
 
-for(var i = 0; i <pacientes.length ; i++){
+for(let i = 0; i <pacientes.length ; i++){
 
-    var paciente = pacientes[i];
+    let paciente = pacientes[i];
 
-    var tdPeso = paciente.querySelector(".info-peso");
-    var peso = tdPeso.textContent;
+    let tdPeso = paciente.querySelector(".info-peso");
+    let peso = tdPeso.textContent;
     
-    var tdAltura = paciente.querySelector(".info-altura");
-    var altura = tdAltura.textContent;
+    let tdAltura = paciente.querySelector(".info-altura");
+    let altura = tdAltura.textContent;
     
-    var tdImc = paciente.querySelector(".info-imc");
+    let tdImc = paciente.querySelector(".info-imc");
     
     
-    var pessoa_valida = true
+    let pessoa_valida = true
     
     if (peso <= 0 || peso >= 400){
         console.log("Pessoa invalida");
@@ -33,31 +33,13 @@ for(var i = 0; i <pacientes.length ; i++){
     }
     
     if (pessoa_valida){
-        var imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2); 
+        let imc = calcImc(peso,altura)
+        tdImc.textContent = imc; 
     }
 }
 
-let botaoAdd = document.querySelector("#adicionar-paciente");
-botaoAdd.addEventListener("click", function(event){
-    event.preventDefault();
-  let form = document.querySelector("#formAdd");
-
-  let nome = form.nome.value;
-  let peso = form.peso.value;
-  let altura = form.altura.value;
-  let gordura  = form.gordura .value;
-
-  let pacienteTr=document.createElement("tr");
-  
-  let nomeTd=document.createElement("tr");
-  let pesoTd=document.createElement("tr");
-  let alturaTd=document.createElement("tr");
-  let gorduraTd=document.createElement("tr");
-  let imcTd=document.createElement("tr");
-
-  nomeTd.textContent = nome
-  pesoTd.textContent = peso
-  alturaTd.textContent = altura
-  gorduraTd.textContent = gordura
-});
+function calcImc(peso,altura){
+    let imc = 0;
+    imc = peso / (altura * altura);
+    return imc.toFixed(2);
+}
