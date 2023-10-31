@@ -5,6 +5,7 @@
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	background-color: #AAA;
 }
 
 header{
@@ -12,6 +13,7 @@ header{
 	height: 3em;
 	color: #FFF;
 	margin-bottom: 1em;
+	padding: 5px 0 0 25px;
 }
 
 header h1{
@@ -68,8 +70,9 @@ table{
 td, th {
 	padding: .7em;
 	margin: 0;
-	border: 1px solid #ccc;
+	border: 1px solid #000000;
 	text-align: center;
+	background-color: #818181;
 }
 
 th{
@@ -97,7 +100,7 @@ label{
 }
 
 .grupo{
-	width: 70%;
+	width: 49%;
 	display: inline-block;
 	padding: 10px 0px;
 }
@@ -166,11 +169,24 @@ button[disabled=disabled], button:disabled {
 }
 
 .topo-tabela {
-	background-color: black;
+	background-color: rgb(58, 58, 58);
 	color: white;
 }
 
 .img {
-	width: 40%;
+	width: 20%;
 	height: 40%;
+	display: flex;
+    margin: 0 0 0 38%;
 }
+
+input {
+	border-radius: 8px;
+}
+
+.grupo-email{
+	width: 99%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
