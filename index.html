@@ -16,8 +16,10 @@
 			</div>
 		</header>
 		<main>
-			<section class="container">
+			<section class="container m1">
 				<h2>Meus pacientes</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
 				<table>
 					<thead>
 						<tr>
@@ -69,13 +71,15 @@
 						</tr>
 					</tbody>
 				</table>
-
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Pacientes</button>
+			 </section>
 			</section>
 		</main>
 
-		<section class="container">
+		<section class="container m2">
 
 			<h2 id="titulo-form">Adicionar novo paciente</h2>
+			<ul id="error"></ul>
 			
 			<form id="formAdd">
 
@@ -107,5 +111,8 @@
 
 		<script src="js/principal.js"></script>
 		<script src="js/form.js"></script>
+		<script src="js/remover-paciente.js"></script>
+		<script src="js/filtro.js"></script>
+		<script src="js/buscar-paciente.js"></script>
 	</body>
 </html>
