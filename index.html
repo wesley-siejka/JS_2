@@ -16,18 +16,18 @@
 			</div>
 		</header>
 		<main>
-			<section class="container m1">
+			<section class="container-tabela">
 				<h2>Meus pacientes</h2>
 				<label for="filtrar-tabela">Filtre:</label>
 				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
 				<table>
 					<thead>
-						<tr>
-							<th>Nome</th>
-							<th>Peso(kg)</th>
-							<th>Altura(m)</th>
-							<th>Gordura Corporal(%)</th>
-							<th>IMC</th>
+						<tr class="topo-tabela">
+							<th class="topo-tabela">Nome</th>
+							<th class="topo-tabela">Peso(kg)</th>
+							<th class="topo-tabela">Altura(m)</th>
+							<th class="topo-tabela">Gordura Corporal(%)</th>
+							<th class="topo-tabela">IMC</th>
 						</tr>
 					</thead>
 					<tbody id="tabela-pacientes">
@@ -74,9 +74,9 @@
 				<button id="buscar-pacientes" class="botao bto-principal">Buscar Pacientes</button>
 			 </section>
 			</section>
-		</main>
+		
 
-		<section class="container m2">
+		<section class="container-adiciona">
 
 			<h2 id="titulo-form">Adicionar novo paciente</h2>
 			<ul id="error"></ul>
@@ -107,7 +107,9 @@
 			
 			</form>
 		</section>
-		
+		</main>
+
+		<img class="img" src="./Captura de tela_2023-10-31_09-37-07.png">
 
 		<script src="js/principal.js"></script>
 		<script src="js/form.js"></script>
